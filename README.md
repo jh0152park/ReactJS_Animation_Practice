@@ -52,7 +52,18 @@ Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect t
   
   return < motion.div drag="x" style={{ x, opacity }} />
   ```
-
+  
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/27f81f1e-6701-4b82-a598-3d7e10558d27
+
+
+## [7. Scroll](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/7.%20Scroll)
+Basically using all of `useMotionValue` and `useTransform`, so please pay attention with `No.6 section`
+- `useViewportScroll`: will give four different values like `scrollX`, `scrollXProgress`, `scrollY`, `scrollYProgreses`.
+  * `scrollX`: will be return `number` value of current X position in pixels of window
+  * `scrollY`: will be return `number` value of current Y position in pixels of window
+  * `scrollXProgress`: will be return `float` value between 0 and 1 of current X progress position of window
+  * `scrollYProgress`: will be return `float` value between 0 and 1 of current Y progress position of window
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/4f3c399d-eac3-409a-a1ac-5691a416519f
 
 
