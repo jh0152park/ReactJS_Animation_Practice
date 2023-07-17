@@ -4,6 +4,8 @@ ReactJS animation practice with `framer-motion`
 # Reference
 Framer: https://www.framer.com/motion/
 
+Logo: https://fontawesome.com
+
 # Animation Videos
 ## [1. Rotate](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/1.RotateAnimation)
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/6bdaef61-bfbd-47d6-9e4a-176293765f89
@@ -58,12 +60,50 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/27f81f
 
 ## [7. Scroll](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/7.%20Scroll)
 Basically using all of `useMotionValue` and `useTransform`, so please pay attention with `No.6 section`
-- `useViewportScroll`: will give four different values like `scrollX`, `scrollXProgress`, `scrollY`, `scrollYProgreses`.
+- `useViewportScroll`: will give four different values like `scrollX`, `scrollXProgress`, `scrollY`, `scrollYProgreses`
   * `scrollX`: will be return `number` value of current X position in pixels of window
   * `scrollY`: will be return `number` value of current Y position in pixels of window
   * `scrollXProgress`: will be return `float` value between 0 and 1 of current X progress position of window
   * `scrollYProgress`: will be return `float` value between 0 and 1 of current Y progress position of window
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/4f3c399d-eac3-409a-a1ac-5691a416519f
+
+## [8. Logo Animation](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/8.Logo%20Animation)
+- `svg logo`: took svg file from `fontaswome` site
+- `path`: kind of default tag of svg element
+- `stroke`: color of side of logo image
+- `stroke-width(strokeWidth)`: width of stroke color
+- `pathLength`: length of drawing the entire logo. A value between 0 and 1. 0 is not drawn at all, and 1 is drawn at all
+- `fill`: literally the color to fill of entire logo
+- `transition`: can adabtive the different setting value to each other at same `motion content`. The most important thing is `transition` is not a CSS syntax of styled component, just one of property of `motion conent` as below
+  ```TS
+  <SVG
+                xmlns="http://www.w3.org/2000/svg"
+                height="10em"
+                viewBox="0 0 448 512"
+            >
+                <motion.path
+                    variants={svg}
+                    initial="start"
+                    animate="end"
+                    transition={{
+                        default: {
+                            duration: 5,
+                        },
+                        fill: {
+                            duration: 2,
+                            delay: 3,
+                        },
+                    }}
+                    ...
+                    ...
+                    ...
+                />
+            </SVG>
+  ```
+
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8c1bfbe9-d2aa-4a40-b444-73d6cad4bc27
+
 
 
