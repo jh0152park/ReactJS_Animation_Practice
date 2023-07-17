@@ -28,3 +28,6 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/f42946
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d3698504-4033-4a3c-b423-b066ccfc1b79
 
+## [6. Motion Value]
+- `Motion Value`: It is not a part of `React`. That mean is would not be re-rendering when our status of motion content was changed.
+
