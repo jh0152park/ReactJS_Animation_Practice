@@ -1,6 +1,9 @@
 # ReactJS Animation Practice
 ReactJS animation practice with `framer-motion`
 
+# Reference
+Framer: https://www.framer.com/motion/
+
 # Animation Videos
 ## [1. Rotate](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/1.RotateAnimation)
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/6bdaef61-bfbd-47d6-9e4a-176293765f89
@@ -30,4 +33,22 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d36985
 
 ## [6. Motion Value]
 - `Motion Value`: It is not a part of `React`. That mean is would not be re-rendering when status was changed of our motion content.
-
+Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect to `motion content(like div or span or whatever)` with style                          attribute like below.
+  ```TS
+  import { motion, useMotionValue } from "framer-motion"
+  
+  export function MyComponent() {
+  const x = useMotionValue(0)
+  return < motion.div style={{ x }} />
+  ```
+  * `set`: would be update the `motion content` with set method. `Ex) x.set(100)`
+  * `get`: can read the value of `motion contenct` with get method. also its should be `string|number`. `Ex) x.get()`
+- `useTransform`: connect to the `useMotionValue` with this method. It is will be return new mapping value from `input range` to `output range`, after that can change the state of `other motion value` with this new return value.
+  ```TS
+  const x = useMotionValue(0)
+  const input = [-200, 0, 200]
+  const output = [0, 1, 0]
+  const opacity = useTransform(x, input, output)
+  
+  return < motion.div drag="x" style={{ x, opacity }} />
+  ```
