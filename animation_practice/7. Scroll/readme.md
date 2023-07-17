@@ -1,3 +1,6 @@
+# Code
+
+```TS
 import styled from "styled-components";
 import {
     motion,
@@ -57,3 +60,5 @@ function App() {
 }
 
 export default App;
+
+```
