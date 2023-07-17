@@ -31,7 +31,7 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/f42946
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d3698504-4033-4a3c-b423-b066ccfc1b79
 
-## [6. Motion Value]
+## [6. Motion Value](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/6.useMotionValue_useTransform)
 - `Motion Value`: It is not a part of `React`. That mean is would not be re-rendering when status was changed of our motion content.
 Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect to `motion content(like div or span or whatever)` with style                          attribute like below.
   ```TS
@@ -43,7 +43,7 @@ Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect t
   ```
   * `set`: would be update the `motion content` with set method. `Ex) x.set(100)`
   * `get`: can read the value of `motion contenct` with get method. also its should be `string|number`. `Ex) x.get()`
-- `useTransform`: connect to the `useMotionValue` with this method. It is will be return new mapping value from `input range` to `output range`, after that can change the state of `other motion value` with this new return value.
+- `useTransform`: connect to the `useMotionValue` with this method. It is will be return new mapping value from `input range` to `output range`, after that can change the state of `other motion value` with this new return value. and also the new return value should be `string|number`
   ```TS
   const x = useMotionValue(0)
   const input = [-200, 0, 200]
@@ -52,3 +52,7 @@ Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect t
   
   return < motion.div drag="x" style={{ x, opacity }} />
   ```
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/27f81f1e-6701-4b82-a598-3d7e10558d27
+
+
