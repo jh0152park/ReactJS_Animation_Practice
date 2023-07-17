@@ -32,7 +32,7 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/f42946
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d3698504-4033-4a3c-b423-b066ccfc1b79
 
 ## [6. Motion Value](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/6.useMotionValue_useTransform)
-- `Motion Value`: It is not a part of `React`. That mean is would not be re-rendering when status was changed of our motion content.
+- `useMotionValue`: It is not a part of `React`. That mean is would not be re-rendering when status was changed of our motion content.
 Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect to `motion content(like div or span or whatever)` with style                          attribute like below.
   ```TS
   import { motion, useMotionValue } from "framer-motion"
