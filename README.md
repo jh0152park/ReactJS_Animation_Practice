@@ -29,7 +29,7 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/f42946
 - `drag`: enable to can able to darg of `motion content` with no limit(constraints)
 - `dragSnapToOrigin`: bring back the drag able motion content to position of initial when drag off
 - `dragElastic`: could be `0 to 1` and its gonna be elastic when dragging
-- `dragConstraints`: can setup the limit of our draggable content whit this feature. can set the limit distance manually with `top`,`bottom`,`left`,`right` or just let know the limit(constraints) element with `useRef`
+- `dragConstraints`: can setup the limit of our draggable content whit this feature. can set the limit distance manually with `top`,`bottom`,`left`,`right`                       or just let know the limit(constraints) element with `useRef`
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d3698504-4033-4a3c-b423-b066ccfc1b79
 
@@ -75,7 +75,7 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/4f3c39
 - `stroke-width(strokeWidth)`: width of stroke color
 - `pathLength`: length of drawing the entire logo. A value between 0 and 1. 0 is not drawn at all, and 1 is drawn at all
 - `fill`: literally the color to fill of entire logo
-- `transition`: can adabtive the different setting value to each other at same `motion content`. The most important thing is `transition` is not a CSS syntax of styled component, just one of property of `motion conent` as below
+- `transition`: can adabtive the different setting value to each other at same `motion content`. The most important thing is `transition` is not a CSS                       syntax of styled component, just one of property of `motion conent` as below
   ```TS
     <SVG
         xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +117,70 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8365a8
   ## [9-1. Slider](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/9-1.Slider)
   
   https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/87bb8253-3541-4c48-85d2-b6643cb1f198
+
+  ## [9-2. Slider Reverse](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/9-2.Slider%20Reverse)
+  - `custom`: Inform the variant of the change in status from the outside. Also have to write down at the `AnimatePresence` element too.
+              After that, from `custom` we can have different logic at the our each variants like below.
+    ```TS
+    const boxVariants = {
+      enter: (reverse: number) => ({
+          x: 500 * reverse,
+          opacitiy: 0,
+          scale: 0,
+      }),
+      center: {
+          x: 0,
+          opacitiy: 1,
+          scale: 1,
+          rotateZ: 360,
+          transition: {
+              duration: 0.3,
+          },
+      },
+      exit: (reverse: number) => ({
+          opacity: 0,
+          scale: 0,
+          x: -500 * reverse,
+      }),
+    };
+
+    AnimatePresence custom={reverse}>
+        <Box
+            custom={reverse}
+            variants={boxVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            key={visible}
+        >
+            {visible}
+        </Box>
+    </AnimatePresence>
+    ```
+
+    https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/9c8a650c-94ca-499a-bd96-e5dc92e43e03
+
+  ## [9-3. Wait Mode](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/9-2.Slider%20Reverse)
+  - `mode="wait"`: would be start the next animation when done previous animation. Default value is `exit` animation and `initial` animation are start at                       the almost same time like as above video. But different when enable the `wait` mode as below video.
+    ```TS
+    AnimatePresence mode="wait" custom={reverse}>
+        <Box
+            custom={reverse}
+            variants={boxVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            key={visible}
+        >
+            {visible}
+        </Box>
+    </AnimatePresence>
+    ```
+    
+    https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d095aae1-a3b7-4bbe-80d8-e9e2e8758b89
+
+
+
 
 
 
