@@ -212,6 +212,12 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/01487d
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/6ea7c1b9-6cb5-4c96-b4d8-79145e626b85
 
+## [12. Select Animation(layoutId)](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/12.Select)
+Create different 4 element with own unique key each. After that connect with that between separate element using `layoutId`. Then automatically applies a super awesome animation!
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/14625ab2-7a92-4b8b-bec7-f22b037e710f
+
+
 
 
 
