@@ -19,74 +19,43 @@ const Wrapper = styled(motion.div)`
 `;
 
 const Box = styled(motion.div)`
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 40px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
     font-size: 20px;
     font-weight: bold;
-
-    position: absolute;
-    top: 200px;
 `;
 
-const boxVariants = {
-    enter: (reverse: number) => ({
-        x: 500 * reverse,
-        opacitiy: 0,
-        scale: 0,
-    }),
-    center: {
-        x: 0,
-        opacitiy: 1,
-        scale: 1,
-        rotateZ: 360,
-        transition: {
-            duration: 0.3,
-        },
-    },
-    exit: (reverse: number) => ({
-        opacity: 0,
-        scale: 0,
-        x: -500 * reverse,
-    }),
-};
+const Circle = styled(motion.div)`
+    background-color: #00a5ff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+`;
 
 function App() {
-    const [visible, setVisible] = useState(1);
-    const [reverse, setReverse] = useState(1);
-
-    function next() {
-        setVisible(visible === 10 ? 1 : visible + 1);
-        setReverse(1);
-    }
-
-    function prev() {
-        setVisible(visible === 1 ? 10 : visible - 1);
-        setReverse(-1);
+    const [clicked, setClikced] = useState(false);
+    function toggleClicked() {
+        setClikced((prev) => !prev);
     }
 
     return (
-        <Wrapper>
-            <AnimatePresence mode="wait" custom={reverse}>
-                <Box
-                    custom={reverse}
-                    variants={boxVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    key={visible}
-                >
-                    {visible}
-                </Box>
-            </AnimatePresence>
-            <button onClick={next}>Next</button>
-            <button onClick={prev}>Prev</button>
+        <Wrapper onClick={toggleClicked}>
+            <Box
+                style={{
+                    justifyContent: clicked ? "center" : "flex-start",
+                    alignItems: clicked ? "center" : "flex-start",
+                }}
+            >
+                <Circle layout></Circle>
+            </Box>
         </Wrapper>
     );
 }
