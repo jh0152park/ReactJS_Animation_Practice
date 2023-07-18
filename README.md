@@ -77,29 +77,29 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/4f3c39
 - `fill`: literally the color to fill of entire logo
 - `transition`: can adabtive the different setting value to each other at same `motion content`. The most important thing is `transition` is not a CSS syntax of styled component, just one of property of `motion conent` as below
   ```TS
-  <SVG
-                xmlns="http://www.w3.org/2000/svg"
-                height="10em"
-                viewBox="0 0 448 512"
-            >
-                <motion.path
-                    variants={svg}
-                    initial="start"
-                    animate="end"
-                    transition={{
-                        default: {
-                            duration: 5,
-                        },
-                        fill: {
-                            duration: 2,
-                            delay: 3,
-                        },
-                    }}
-                    ...
-                    ...
-                    ...
-                />
-            </SVG>
+    <SVG
+        xmlns="http://www.w3.org/2000/svg"
+        height="10em"
+        viewBox="0 0 448 512"
+    >
+        <motion.path
+            variants={svg}
+            initial="start"
+            animate="end"
+            transition={{
+                default: {
+                    duration: 5,
+                },
+                fill: {
+                    duration: 2,
+                    delay: 3,
+                },
+            }}
+            ...
+            ...
+            ...
+        />
+    </SVG>
   ```
 
 
