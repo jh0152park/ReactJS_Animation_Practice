@@ -35,7 +35,8 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d36985
 
 ## [6. Motion Value](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/6.useMotionValue_useTransform)
 - `useMotionValue`: It is not a part of `React`. That mean is would not be re-rendering when status was changed of our motion content.
-Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect to `motion content(like div or span or whatever)` with style                          property like below.
+                    Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect to `motion content(like div or span or whatever)` with style property like below.
+
   ```TS
   import { motion, useMotionValue } from "framer-motion"
   
@@ -45,7 +46,8 @@ Also it's keep tracing the `state(상태)` and `velocity(속도)`, and connect t
   ```
   * `set`: would be update the `motion content` with set method. `Ex) x.set(100)`
   * `get`: can read the value of `motion contenct` with get method. also its should be `string|number`. `Ex) x.get()`
-- `useTransform`: connect to the `useMotionValue` with this method. It is will be return new mapping value from `input range` to `output range`, after that can change the state of `other motion value` with this new return value. and also the new return value should be `string|number`
+- `useTransform`: connect to the `useMotionValue` with this method. It is will be return new mapping value from `input range` to `output range`, after that                     can change the state of `other motion value` with this new return value. and also the new return value should be `string|number`
+  
   ```TS
   const x = useMotionValue(0)
   const input = [-200, 0, 200]
@@ -76,6 +78,7 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/4f3c39
 - `pathLength`: length of drawing the entire logo. A value between 0 and 1. 0 is not drawn at all, and 1 is drawn at all
 - `fill`: literally the color to fill of entire logo
 - `transition`: can adabtive the different setting value to each other at same `motion content`. The most important thing is `transition` is not a CSS                       syntax of styled component, just one of property of `motion conent` as below
+  
   ```TS
     <SVG
         xmlns="http://www.w3.org/2000/svg"
