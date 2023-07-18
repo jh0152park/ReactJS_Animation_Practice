@@ -1,3 +1,6 @@
+# Code
+
+```TS
 import styled from "styled-components";
 import {
     AnimatePresence,
@@ -92,3 +95,5 @@ function App() {
 }
 
 export default React.memo(App);
+
+```
