@@ -111,8 +111,13 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8c1bfb
     * `inital`: literally inital state of `motion content` to change
     * `animate`: final state of `motion content` to change, from `initial` condition
     * `exit`: literally exit state of `motion content` when gonna be gone
-
-
+      
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8365a8ae-8a10-47c2-a72e-9f52566450ff
+
+  ## [9-1. Slider](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/9-1.Slider)
+  
+  https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/87bb8253-3541-4c48-85d2-b6643cb1f198
+
+
 
 
