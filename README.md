@@ -200,7 +200,19 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8365a8
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/01487df6-b688-45c7-bf8a-e3bc1006adc6
 
-## [11. Shared Layout(layoutId)]()
+## [11. Shared Layout(layoutId)](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/11.Shared%20Layout)
+- `layoutId`: just adaptived same animation at from different element with just same `layoutId` as below
+
+    ```TS
+    <Wrapper onClick={toggleClicked}>
+        <Box>{!clicked ? <Circle layoutId="circle"></Circle> : null}</Box>
+        <Box>{clicked ? <Circle layoutId="circle"></Circle> : null}</Box>
+    </Wrapper>
+    ```
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/6ea7c1b9-6cb5-4c96-b4d8-79145e626b85
+
+
 
 
 
