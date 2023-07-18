@@ -15,7 +15,6 @@ const Wrapper = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 `;
 
 const Box = styled(motion.div)`
@@ -26,10 +25,12 @@ const Box = styled(motion.div)`
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 
     display: flex;
-    /* justify-content: flex-start;
-    align-items: flex-start; */
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
     font-weight: bold;
+
+    margin: 20px;
 `;
 
 const Circle = styled(motion.div)`
@@ -48,14 +49,8 @@ function App() {
 
     return (
         <Wrapper onClick={toggleClicked}>
-            <Box
-                style={{
-                    justifyContent: clicked ? "center" : "flex-start",
-                    alignItems: clicked ? "center" : "flex-start",
-                }}
-            >
-                <Circle layout></Circle>
-            </Box>
+            <Box>{!clicked ? <Circle layoutId="circle"></Circle> : null}</Box>
+            <Box>{clicked ? <Circle layoutId="circle"></Circle> : null}</Box>
         </Wrapper>
     );
 }
