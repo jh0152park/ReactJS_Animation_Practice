@@ -179,6 +179,11 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8365a8
     
     https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/d095aae1-a3b7-4bbe-80d8-e9e2e8758b89
 
+## [10. Layout](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/10.Layout)
+- `layout`: just will give some animation effect to state change element automatically
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/01487df6-b688-45c7-bf8a-e3bc1006adc6
+
 
 
 
