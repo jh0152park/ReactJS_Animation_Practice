@@ -105,5 +105,14 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/4f3c39
 
 https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8c1bfbe9-d2aa-4a40-b444-73d6cad4bc27
 
+## [9. Exit(AnimatePresence)](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/9.Exit)
+- `AnimatePresence`: have to be showing this and must be had an children element with `condition systax(condition? true : false)`
+- Properties
+    * `inital`: literally inital state of `motion content` to change
+    * `animate`: final state of `motion content` to change, from `initial` condition
+    * `exit`: literally exit state of `motion content` when gonna be gone
+
+
+https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8365a8ae-8a10-47c2-a72e-9f52566450ff
 
 
