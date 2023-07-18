@@ -181,6 +181,7 @@ https://github.com/jh0152park/ReactJS_Animation_Practice/assets/118165975/8365a8
 
 ## [10. Layout](https://github.com/jh0152park/ReactJS_Animation_Practice/tree/main/animation_practice/10.Layout)
 - `layout`: just will give some animation effect to state change element automatically
+
     ```TS
     <Wrapper onClick={toggleClicked}>
         <Box
